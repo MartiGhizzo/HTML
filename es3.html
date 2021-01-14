@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html> 
+    <head> </head>
+    <body> 
+        <script>
+            "use strict";
+            let coefficienti = [0, 0, 0]
+            coefficienti = coefficienti.map( e => {
+                e = prompt("Inserisci un coefficiente: ")
+                return +e
+            })
+            if(coefficienti[0] == 0){
+                alert("Non va bene questo coefficiente")
+            }else{
+                let delta = coefficienti[1]**2 -4*coefficienti[0]*coefficienti[2]
+                if(delta < 0){
+                    alert("Non ha soluzioni")
+                } else{
+                    let x1 = (Math.sqrt(delta)-coefficienti[1])/(2*coefficienti[0])
+                    let x2 = (-Math.sqrt(delta)-coefficienti[1])/(2*coefficienti[0])
+                    if (x1 === x2) {
+                        alert("Soluzioni uguali")
+                    }
+                    else {
+                        alert("Soluzioni distinte")
+                    }
+                    alert(x1)
+                    alert(x2)
+                }
+            }
+        </script>
+    </body>
+</html>
